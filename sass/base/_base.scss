@@ -1,0 +1,31 @@
+html,body{
+	height: 100%;
+  box-sizing: border-box; 
+}
+* { box-sizing: inherit; }
+#container {	
+	margin:0 auto (-$footerH);
+	min-height:100%;
+	overflow: hidden;
+}
+.contacts{
+	background-color: #ccc;
+}
+.cf:before,
+.cf:after {
+    content: " "; 
+    display: table; 
+}
+
+.cf:after {
+    clear: both;
+}
+
+//Бэкграунды
+@each $pic-name, $type in $name {
+  @if($type =='') {$type:'jpg'}
+  .bg-#{$pic-name} {
+    background-image: url('../img/#{$pic-name}.#{$type}');
+    background-repeat: no-repeat;
+  }
+}

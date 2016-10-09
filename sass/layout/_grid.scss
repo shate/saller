@@ -1,0 +1,40 @@
+@import "compass";
+@import "susy";
+@import 'photoshop-drop-shadow';
+$susy:(
+	//container :1000px,
+	//columns: 12,  
+	//math: static,	
+  	//gutter-position: inside,
+    gutters: .1,
+    
+  
+  debug: (
+    image: show,
+    color: rgba(#66f, .65),
+    output : overlay
+   
+  )
+  );
+
+@include layout(12 (80px 10px) static);
+.wrap{
+	@include container;
+}
+.content{	
+	
+    padding: 0 0 $footerH;
+   
+	}
+aside{
+	@include span(3);
+}
+.inner{
+  @include span(9 last);
+}
+
+
+
+
+
+

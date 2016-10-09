@@ -1,0 +1,18 @@
+header {
+	height: $headrH;
+	background-color: $header-color;
+	
+	.logo{		
+	    text-indent: -9999px;
+	     outline: none;	     
+     	 @include card(5, #990033);
+	}
+	article{
+		&:first-child{
+			@include span(2 first);
+		}
+		&:last-child{
+			@include span(10 last);
+		}
+	}
+}
