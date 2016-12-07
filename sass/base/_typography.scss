@@ -1,6 +1,6 @@
 
 
-@include font-face("Calibri-Light", font-files("Calibri-Light.ttf", "Calibri-Light.eot","Calibri-Light.svg"));
+@include font-face("a_grotic", font-files("a_grotic.ttf", "a_grotic.eot","a_grotic.svg"));
 @include establish-baseline;
 body{
 	font-family: $base-font;	
