@@ -1,8 +1,18 @@
 nav {
-	
+	padding-top: 15px;
+
 }
 ul.header_nav {	
-	@include horizontal-list(10px);
+	@include horizontal-list(20px);
+}
+footer{
+	ul{
+
+		@include inline-block-list(31px);
+		padding-top: 20px;
+		margin-bottom: 60px;
+
+	}
 }
 
 

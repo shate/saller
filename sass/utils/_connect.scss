@@ -1,0 +1,10 @@
+@import "compass";
+@import "susy";
+@import 'photoshop-drop-shadow';
+
+//$ico-layout:smart;
+$ico-spacing: 5px;
+@import "ico/*.png";
+
+$ico-sprite-dimensions: true;
+@include all-ico-sprites;

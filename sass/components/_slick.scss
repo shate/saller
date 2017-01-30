@@ -1,0 +1,215 @@
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    [dir="rtl"] & {
+        float: right;
+    }
+
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+.slides {
+    button {
+        border: none;
+        text-indent: -99999px;
+        @include circle(54px);
+        position: absolute;
+        outline: none;
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+.center{
+    margin-top: 45px;
+    height: 720px;
+    article{
+        padding: 40px 20px 0;
+        height: 650px;
+
+        img{
+            @include circle(220px);
+            margin-bottom: 10px;
+        }
+        h4{
+            font-family: 'opensans-light';
+            margin-bottom: 0;
+        }
+        p{
+            margin-top: 22px;
+            &.text-yellow{
+                letter-spacing: 0.22em;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .slick-center{
+        position: relative;
+
+        img{
+            width: 290px;
+            height: 290px;
+            @include transition-property(width, height);
+            @include transition-duration(1s);
+        }
+        article{
+            padding: 0;
+            h4{
+                font-size: 33px;
+            }
+        }
+    }
+
+    button{
+
+        background-color: #edf2fd;
+        top: 50%;
+        margin-top: -90px;
+
+        &.slick-next{
+              left: -100px;
+          }
+        &.slick-prev{
+           right: -100px;
+            &:after{
+                @include rotate(180deg);
+            }
+        }
+        &:after{
+            content: '';
+            @include ico-sprite(s-arrow) ;
+            position: absolute;
+            left: 19px;
+            top: 17px;
+        }
+    }
+}
+.slider{
+    margin-top: 50px;
+    button{
+        background-color: #fff;
+        top: 50%;
+        margin-top: -125px;
+        z-index: 100;
+
+        &.slick-next{
+            left: -10px;
+        }
+        &.slick-prev{
+            right: -10px;
+            &:after{
+                @include rotate(180deg);
+            }
+        }
+        &:after{
+            content: '';
+            @include ico-sprite(s-arrow-black) ;
+            position: absolute;
+            left: 19px;
+            top: 17px;
+        }
+    }
+    article{
+        padding: 0 40px;
+        h3{
+            margin-bottom: 10px;
+        }
+        p{
+            margin-top: 30px;
+        }
+    }
+}
+  .brands{
+      margin-top: 30px;
+      img{
+          display: block;
+          margin-bottom: 15px;
+          margin: auto;
+      }
+
+  }

@@ -1,25 +1,22 @@
-$footerH : 150px; /*Высота футтера*/
-$headrH : 200px; /*Высота хедера*/
+$footerH : 570px; /*Высота футтера*/
+$headrH : 60px; /*Высота хедера*/
 $base-font-size: 16px;
-$base-line-height : 25px;
-$base-font: Verdana, Geneva, sans-serif;
+$base-font: "opensans-regular";
 $base-font-color : #000;
 $header-color : #000;
-$footer-color : #903;
+$footer-color : #070d21;
 /*Цвет ссылок*/
-$normal: #ddd; 
-$hover : red;
+$normal: #fff;
+
+$button-padding: 20px 49px;
+$button-font-size : $base-font-size;
+$button-radius : 50px;
 
 [class^="ico-"]{
 	display: inline-block;
 }
 
-$breakpoints: (
-  'small':  767px,
-  'medium': 992px,
-  'large':  1200px
-) !default;
 
 //Названия бэков
 //Пример заполнения (key1: value1, key2: value2, key3: value3);
-$name : ('bg':'gif', 'colo':'' )!default;
+$name : ('3':'','4':'','6':'','9':'','10':'','footer':'','prog':'png')!default;

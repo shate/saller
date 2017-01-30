@@ -1,0 +1,42 @@
+form{
+
+  label{
+    display: block;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  input[type=text]{
+    font-family: 'opensans-lightitalic';
+    color: #2c3249;
+    padding-left: 10px;
+    height: 46px;
+    width: 285px;
+    outline: none;
+    @include input-placeholder {
+      font-family: 'opensans-lightitalic';
+      color: #2c3249;
+    }
+  }
+  &.input-{
+    &white{
+      input[type=text]{
+        text-align: center;
+        border-color: transparent;
+
+      }
+    }
+    &blue{
+      padding-top: 5px;
+      input{
+        background-color: #e8edff;
+        border-left:none;
+        border-top: 2px solid #d1dbff;
+      }
+      label{
+        text-align: left;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+

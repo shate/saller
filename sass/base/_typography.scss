@@ -1,36 +1,179 @@
-
-
-@include font-face("a_grotic", font-files("a_grotic.ttf", "a_grotic.eot","a_grotic.svg"));
+@each $font in
+				bebasneue_light,
+				bebasneue_regular,
+				opensans-light,
+				opensans-lightitalic,
+				opensans-regular,
+				opensans-semibold,
+				opensans-semibolditalic
+{
+	@include font-face('#{$font}', font-files('#{$font}.ttf', '#{$font}.eot','#{$font}.svg','#{$font}.woff'));
+}
 @include establish-baseline;
 body{
 	font-family: $base-font;	
 	color: $base-font-color;
 	font-size: $base-font-size;	
 }
+%h{
+	font-family: "bebasneue_light";
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+
+	span{
+		font-family: "bebasneue_regular";
+	}
+}
+
 
 h1,h2{
-	font-family: "Calibri-Light";
-	
+	@extend %h;
 }
 h1{
-@include adjust-font-size-to(30px);
-	
+	padding-left: 20px;
+	z-index: 10;
+	font-size: 87px;
+	line-height: 105px;
+	color: #fff;
+
 }
-h2{	
-	@include adjust-font-size-to(30px);
+h2{
+	font-size: 70px;
+	line-height: 70px;
+	margin-bottom: 10px;
+	letter-spacing: 0.02em;
+
+		span{
+			&.big-space {
+				letter-spacing: 0.24em;
+				margin-left: -9px;
+			}
+
+		}
+
 }
 h3{
-	@include adjust-font-size-to(30px);
+	font-family: 'opensans-light';
+	font-size: 40px;
+	line-height: 45px;
+	margin-bottom: 20px;
+	position: relative;
+	z-index: 20;
+	@at-root &.num{
+		span{
+			&:first-child{
+				font-family: 'opensans-semibold';
+				float: left;
+				position: relative;
+				top: 2px;
+			}
+			&:last-child{
+				display: block;
+				margin-left: 40px;
+				letter-spacing: -0.01em;
+				line-height: 50px;
+			}
+		}
+		&.text-center{
+			span{
+				float: none;
+				display: inline;
+
+				&:last-child{
+					margin-left: 10px;
+				}
+			}
+		}
+	}
 }
 h4{
-	@include adjust-font-size-to(30px);
-}
+	font-size: 25px;
+	line-height: 34px;
+	margin: 15px 0;
 
+	b{
+		font-family: 'opensans-semibold';
+	}
+	&.light{
+		font-family: 'opensans-light';
+	}
+}
+ i{
+	 font-family: 'opensans-lightitalic';
+	 b{
+		 font-family: 'opensans-semibolditalic';
+	 }
+
+ }
 a{
-	@include link-colors($normal, $hover);
+	color: $normal;
 	text-decoration: none;
 }
 
 p{
-	@include hyphenation;
+	line-height: 23px;
+	margin-bottom: 23px;
 }
+b {
+	font-family: "opensans-semibold";
+}
+ .lh-80{
+	 line-height: 80px;
+ }
+ .circle-text{
+	 font-size: 44px;
+	 @include circle(90px) ;
+	 border: 2px solid #ffcc00;
+	 letter-spacing: 0;
+	 display: inline-block;
+	 text-align: center;
+	 line-height: 90px;
+	 margin-left: -5px;
+	 top: -9px;
+ }
+.text-{
+	&green{
+		color: #005d07;
+	}
+	&yellow{
+		color: #ffcc00;
+	}
+	&white{
+		color: #fff;
+		border-color: #fff;
+	}
+	&blue{
+		color: #2b3f83;
+	}
+	&light-blue{
+		color: #61687f;
+		font-size: 11px;
+	}
+	&light{
+		font-family: 'opensans-light';
+	}
+	&center{
+		text-align: center;
+		position: relative;
+		z-index: 100;
+	}
+	&upper{
+		text-transform: uppercase;
+	}
+}
+
+ .m-b-0{
+	 margin-bottom: 0 !important;
+ }
+ .m-t-0{
+	 margin-top: 0 !important;
+ }
+ .p-t-0{
+	 padding-top: 0 !important;
+ }
+ .float-right{
+	 float: right;
+ }
+ .p-0{
+	 padding: 0 !important;
+ }

@@ -1,18 +1,28 @@
 header {
 	height: $headrH;
 	background-color: $header-color;
-	
-	.logo{		
-	    text-indent: -9999px;
-	     outline: none;	     
-
-	}
-	article{
-		&:first-child{
-			@include span(2);
-		}
-		&:last-child{
-			@include span(10 last);
-		}
-	}
+	overflow: hidden;
+	min-width: 986px;
+	 .contacts{
+		 display: inline-block;
+		 float: right;
+		 height: 60px;
+		 line-height: 15px;
+		 width: 342px;
+		 #reg{
+			 color: #000;
+			 float: right;
+			 b{
+				 display: block;
+			 }
+		 }
+		 a{
+		   &:first-child{
+			   position: relative;
+			   top: 20px;
+		   }
+		 }
+	 }
 }
+
+

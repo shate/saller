@@ -59,3 +59,14 @@
   height: $circle-size; 
   border-radius: 50%;
 }
+@mixin scotch-button-theme($color,$button-color,$border-color, $color-text-hover: $color-light, $button-radius : 0) {
+  color: $color;
+  border-color: $button-color;
+  background-color: $button-color;
+  border-bottom: 3px solid  $border-color;
+
+  &:hover {
+    color: $color-text-hover;
+    background-color: $button-color;
+  }
+}
